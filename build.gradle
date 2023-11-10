@@ -1,0 +1,24 @@
+plugins {
+    id 'java'
+    id 'io.freefair.lombok' version '8.4'
+}
+
+group = 'ru.clevertec'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+ext {
+    slf4jVersion = '2.0.7'
+    logbackVersion = '1.4.11'
+    reflectionsVersion = '0.10.2'
+}
+
+dependencies {
+    implementation "org.slf4j:slf4j-api:$slf4jVersion"
+    implementation "ch.qos.logback:logback-core:$logbackVersion"
+    implementation "ch.qos.logback:logback-classic:$logbackVersion"
+    implementation "org.reflections:reflections:$reflectionsVersion"
+}
